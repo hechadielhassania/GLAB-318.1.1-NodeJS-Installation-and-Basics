@@ -25,6 +25,13 @@ const server = http.createServer((req, res) => {
         res.write('<p>Welcome to our website!</p>');
         res.end();
     }
+    // Custom route 2: Basic HTML Contact page
+    else if (parsedUrl.pathname === '/contact') {
+        res.statusCode = 200;
+        res.write('<h1>Contact Us</h1>');
+        res.write('<p>Get in Touch!</p>');
+        res.end();
+    }
     // Custom route 2: Parsing query parameters
     else if (parsedUrl.pathname === '/query') {
         // Get the query parameters
